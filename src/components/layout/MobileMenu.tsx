@@ -14,9 +14,10 @@ export interface NavItem {
 
 interface MobileMenuProps {
   navItems: NavItem[];
+  isScrolled?: boolean;
 }
 
-export function MobileMenu({ navItems }: MobileMenuProps) {
+export function MobileMenu({ navItems, isScrolled = true }: MobileMenuProps) {
   const [isOpen, setIsOpen] = useState(false);
   const pathname = usePathname();
   const triggerRef = useRef<HTMLButtonElement>(null);
@@ -55,7 +56,11 @@ export function MobileMenu({ navItems }: MobileMenuProps) {
         aria-controls="mobile-nav-drawer"
         aria-label={isOpen ? "Tutup menu navigasi" : "Buka menu navigasi"}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="interactive-transition inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[10px] border border-border bg-background p-2 text-text hover:bg-tint"
+        className={`interactive-transition inline-flex min-h-[44px] min-w-[44px] items-center justify-center rounded-[10px] p-2 transition-all duration-300 ${
+          isScrolled
+            ? "border border-border bg-background text-text hover:bg-tint"
+            : "border border-white/30 bg-white/10 text-white hover:bg-white/20"
+        }`}
       >
         {isOpen ? (
           <X className="h-5 w-5" strokeWidth={1.75} aria-hidden="true" />

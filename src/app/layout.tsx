@@ -46,7 +46,6 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(dentistJsonLd) }}
         />
-        <DemoBanner />
         <Header />
         <main id="main-content" className="flex-1">
           {children}

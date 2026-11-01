@@ -3,7 +3,7 @@ import { MessageCircle } from "lucide-react";
 import { siteConfig } from "@/content/site";
 import { buildWhatsAppUrl } from "@/lib/whatsapp";
 import { Container } from "@/components/ui/Container";
-import { mainNavItems } from "./Header";
+import { mainNavItems } from "@/content/navigation";
 
 export function Footer() {
   const whatsappUrl = buildWhatsAppUrl();
