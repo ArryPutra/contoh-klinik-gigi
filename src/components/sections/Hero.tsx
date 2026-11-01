@@ -13,7 +13,7 @@ export function Hero() {
   return (
     <section
       aria-labelledby="hero-heading"
-      className="relative overflow-hidden bg-[#0A192F] py-[76px] lg:py-[108px]"
+      className="relative overflow-hidden bg-[#0A192F] pt-36 pb-20 sm:pt-44 sm:pb-24 lg:pt-[204px] lg:pb-32"
     >
       {/* Background Image: Full-bleed cover */}
       <div className="absolute inset-0 z-0">
