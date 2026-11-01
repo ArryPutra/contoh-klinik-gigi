@@ -28,15 +28,15 @@ export function Header() {
         Lompat ke konten utama
       </a>
 
-      <Container className="flex h-16 items-center justify-between gap-3">
+      <Container className="flex h-16 items-center justify-between gap-2 sm:gap-3">
         {/* Logo SVG & Wordmark Teks */}
         <Link
           href="/"
-          className="interactive-transition flex min-w-0 items-center gap-2.5 py-1 pr-2 text-text hover:opacity-90"
+          className="interactive-transition flex min-w-0 shrink items-center gap-2 py-1 text-text hover:opacity-90"
         >
-          <DentalLogo className="h-8 w-8 shrink-0 sm:h-9 sm:w-9" />
-          <div className="flex min-w-0 items-baseline gap-2">
-            <span className="truncate text-base font-semibold tracking-tight text-text sm:text-lg">
+          <DentalLogo className="h-7 w-7 shrink-0 sm:h-9 sm:w-9" />
+          <div className="flex min-w-0 items-baseline gap-1.5 sm:gap-2">
+            <span className="truncate text-sm font-semibold tracking-tight text-text sm:text-lg">
               {siteConfig.shortName}
             </span>
             <span className="hidden text-xs font-medium text-text-muted sm:inline">
@@ -62,16 +62,16 @@ export function Header() {
         </nav>
 
         {/* Tombol WhatsApp & Menu Mobile */}
-        <div className="flex items-center gap-2">
+        <div className="flex shrink-0 items-center gap-1.5 sm:gap-2">
           <a
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Konsultasi via WhatsApp"
-            className="interactive-transition inline-flex min-h-[44px] items-center justify-center gap-2 rounded-[10px] bg-whatsapp px-3.5 py-2 text-xs font-medium text-background hover:bg-whatsapp-hover sm:px-4 sm:text-sm"
+            className="interactive-transition inline-flex min-h-[38px] items-center justify-center gap-1.5 rounded-[10px] bg-whatsapp px-2.5 py-1.5 text-xs font-medium text-background hover:bg-whatsapp-hover sm:min-h-[44px] sm:gap-2 sm:px-4 sm:py-2 sm:text-sm"
           >
-            <MessageCircle className="h-5 w-5 shrink-0" strokeWidth={1.75} aria-hidden="true" />
-            <span>WhatsApp</span>
+            <MessageCircle className="h-4 w-4 shrink-0 sm:h-5 sm:w-5" strokeWidth={1.75} aria-hidden="true" />
+            <span className="text-xs sm:text-sm">WhatsApp</span>
           </a>
 
           <MobileMenu navItems={mainNavItems} />

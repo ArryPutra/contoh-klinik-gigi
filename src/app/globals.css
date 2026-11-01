@@ -93,3 +93,10 @@
   border-color: var(--accent-hover);
   background-color: var(--tint);
 }
+
+/* Sembunyikan badge developer Next.js di screenshot */
+nextjs-portal,
+#nextjs-dev-tools,
+[data-nextjs-portal] {
+  display: none !important;
+}
